@@ -1,0 +1,21 @@
+{
+  "name": "playwright-lab-saucedemo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "record": "playwright codegen https://www.saucedemo.com/",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0"
+  }
+}
