@@ -21,10 +21,12 @@ test('Evidenciar bug en checkout: problem_user no permite completar los campos d
     await postalCodeInput.fill('0000');
     
     await page.locator('[data-test="continue"]').click();
+    await page.locator('[data-test="continue"]').click();
 
     const mensajeError = page.locator('[data-test="error"]');
     await expect(mensajeError).toBeVisible();
     await expect(mensajeError).toContainText('Error: Last Name is required');
 
     await page.screenshot({ path: 'bug-problem-user-checkout-apellido.png', fullPage: true });
+
 });
